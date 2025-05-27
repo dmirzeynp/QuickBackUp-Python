@@ -122,7 +122,7 @@ class BackupApp:
 
             report = self.generate_report(zip_name, files_backed_up)
             report_path = os.path.join(self.backup_dir, f"rapor_{now}.txt")
-            with open(report_path, 'w') as f:
+            with open(report_path, 'w', encoding='utf-8') as f:
                 f.write(report)
 
             self.backup_history.append(zip_path)
